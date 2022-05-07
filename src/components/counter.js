@@ -12,16 +12,6 @@ function Counter(){
         setCount(count - 1);
     }
 
-
-    function incrementByOneHundred(){
-        setCount(count + 100);
-    }
-    
-    function decrementByOneHundred(){
-        setCount(count - 100);
-    }
-
-
     function incrementByTen(){
         setCount(count + 10);
     }
@@ -34,14 +24,25 @@ function Counter(){
         setCount(0);
     }
 
+    function incrementByOneHundred(){
+        setCount(count + 100);
+    }
+    
+    function decrementByOneHundred(){
+        setCount(count - 100);
+    }
+
     return(
         <div className="counter">
-            <button onClick={incrementByOneHundred}>+100</button>
-            <button onClick={decrementByOneHundred}>-100</button><br/>
-            <button onClick={incrementByTen}>+10</button>
-            <button onClick={decrementByTen}>-10</button><br/>
             <button onClick={increment}>+1</button>
             <button onClick={decrement}>-1</button><br/>
+        
+            <button onClick={incrementByTen}>+10</button>
+            <button onClick={decrementByTen}>-10</button><br/>
+
+            <button onClick={incrementByOneHundred}>+100</button>
+            <button onClick={decrementByOneHundred}>-100</button><br/>
+    
             <span className="count">{count}</span><br />
 
             <button className="reset" onClick={reset}>reset</button>
